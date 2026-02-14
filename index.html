@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love 💖</title>
+<style>
+body {
+  text-align: center;
+  font-family: Arial;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  margin-top: 100px;
+}
+h1 { color: white; }
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+#yes { background: #ff4d6d; color: white; }
+#no { background: white; color: #ff4d6d; }
+#photo { display: none; margin-top: 20px; }
+img { width: 250px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+</style>
+</head>
+<body>
+
+<h1>Will you be my Valentine? 💕</h1>
+
+<button onclick="showPhoto()">Yes ❤️</button>
+<button onclick="sayNo()">No 😢</button>
+
+<p id="text" style="color:white;"></p>
+
+<div id="photo">
+<h2 style="color:white;">Yayyyy! I love you so much 🥰</h2>
+<img src="YOUR_PHOTO_LINK_HERE">
+</div>
+
+<script>
+let messages = [
+"Are you sure? 🥺",
+"Please don't say no 💔",
+"Think again baby 😘",
+"I will cryyyy 😭",
+"Last chance mister 👀"
+];
+let i = 0;
+
+function sayNo(){
+document.getElementById("text").innerText = messages[i % messages.length];
+i++;
+}
+
+function showPhoto(){
+document.getElementById("photo").style.display = "block";
+document.getElementById("text").innerText = "";
+}
+</script>
+
+</body>
+</html>
